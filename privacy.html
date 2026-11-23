@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — ACTON Studio</title>
+<meta name="description" content="How ACTON Studio accesses, uses, stores, shares, retains and deletes Google and YouTube user data.">
 <style>
 :root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5b55;--line:#e3e0d8;--accent:#8a2b1d}
 @media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe6;--muted:#a7a59e;--line:#34332f;--accent:#e08a74}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Georgia,"Times New Roman",serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2rem;line-height:1.2;margin:0 0 .3em}
-h2{font-size:1.15rem;margin:2em 0 .5em;font-family:system-ui,sans-serif}.muted{color:var(--muted)}
-nav{font-family:system-ui,sans-serif;font-size:.95rem;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:28px}
-nav a{margin-right:18px}a{color:var(--accent)}code{font-size:.9em}
+main{max-width:800px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2rem;line-height:1.2;margin:0 0 .3em}
+h2{font-size:1.2rem;margin:2.2em 0 .5em;font-family:system-ui,sans-serif}h3{font-size:1rem;margin:1.4em 0 .3em;font-family:system-ui,sans-serif}
+.muted{color:var(--muted)}nav{font-family:system-ui,sans-serif;font-size:.95rem;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:28px}
+nav a{margin-right:18px}a{color:var(--accent)}code{font-size:.88em}
+table{border-collapse:collapse;width:100%;font-size:.93rem;margin:.6em 0}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-family:system-ui,sans-serif}.wrap{overflow-x:auto}
 footer{margin-top:48px;border-top:1px solid var(--line);padding-top:16px;font-size:.9rem;color:var(--muted);font-family:system-ui,sans-serif}
 </style>
 </head>
@@ -21,80 +24,126 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding-top:16px;font-si
 <h1>Privacy Policy</h1>
 <p class="muted">ACTON Studio · Effective date: 23 November 2026</p>
 
-<p>ACTON Studio ("the application") is the publishing assistant used by the creator of the YouTube channel ACTON
-(@ACTON87) to publish and analyse the channel's own videos. It runs on the creator's computer and is used only by the
-channel owner. This policy explains which Google user data the application accesses, how it is used, stored, protected
-and deleted.</p>
+<p>ACTON Studio ("the application", "we") is the publishing assistant of ACTON, a French-language documentary channel on
+YouTube (<a href="https://www.youtube.com/@ACTON87">@ACTON87</a>). The application runs as a desktop program on the
+channel creator's own computer and is used only by the channel owner. This policy describes exactly which data the
+application accesses through Google and YouTube, why, where it is kept, who it is shared with, how long it is kept and
+how it is deleted. The application uses <strong>YouTube API Services</strong>.</p>
 
-<h2>1. Google user data the application accesses</h2>
-<p>When the channel owner authorises the application with Google OAuth, it requests these permissions:</p>
+<h2>1. Summary</h2>
 <ul>
-<li><code>youtube.upload</code> — upload videos to the owner's channel;</li>
-<li><code>youtube.force-ssl</code> — manage the owner's own videos: playlists, subtitles (captions), thumbnails,
-video settings such as publication time and content disclosures;</li>
-<li><code>youtube.readonly</code> — read the owner's channel and video information;</li>
-<li><code>yt-analytics.readonly</code> — read YouTube Analytics reports of the owner's channel (views, watch time,
-average view duration, subscribers gained, likes, comments, viewer countries).</li>
-</ul>
-<p>The application also reads <strong>public</strong> YouTube data (titles, publication dates, view, like and comment
-counts of public videos and channels) through the YouTube Data API with an API key, to study which topics interest
-French-speaking audiences. It does not access private data of other channels or users.</p>
-<p>The application does not request or access the owner's e-mail, contacts, Gmail, Drive or any other Google service.</p>
-
-<h2>2. How the data is used</h2>
-<ul>
-<li>to upload and schedule the owner's own videos and set their metadata, playlists, subtitles and thumbnails;</li>
-<li>to verify after upload that the video settings were applied correctly;</li>
-<li>to measure the performance of the owner's videos and improve the choice of future topics and formats;</li>
-<li>to compare the owner's results with publicly available statistics of other channels.</li>
-</ul>
-<p>Google user data is not used for advertising, is not sold, is not used to train generalised AI or machine-learning
-models, and is not used for any purpose other than the features listed above.</p>
-
-<h2>3. Sharing</h2>
-<p>Google user data is not shared with or transferred to any third party. Data is sent only to Google/YouTube itself
-when the application calls YouTube API Services on the owner's behalf.</p>
-
-<h2>4. Storage and protection</h2>
-<ul>
-<li>All data is stored locally on the owner's personal computer; there is no server or cloud database.</li>
-<li>The OAuth refresh token is stored in a file in the owner's Windows user profile, outside the application source
-code and version control, readable only by the owner's Windows account. Access tokens are kept in memory only.</li>
-<li>OAuth client credentials and API keys are stored outside the source code and are never written to logs.</li>
-<li>Channel statistics are stored in a local database on the same computer.</li>
+<li>We access only the YouTube channel that the owner authorises (ACTON), and public YouTube statistics.</li>
+<li>We use the data only to publish ACTON's videos and to measure their performance.</li>
+<li>All data stays on the owner's computer. We do not sell, rent or share Google user data, and we do not use it for
+advertising or to train AI models.</li>
+<li>Data received through the owner's authorisation is deleted no later than 30 days after the authorisation stops;
+public statistics are refreshed or deleted within 30 days.</li>
+<li>Access can be revoked at any time at
+<a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
 </ul>
 
-<h2>5. Retention and deletion</h2>
+<h2>2. Data accessed with the owner's Google authorisation (OAuth)</h2>
+<p>The owner signs in with Google once and grants the following permissions. Each one is used only as described.</p>
+<div class="wrap"><table>
+<tr><th>Permission</th><th>Data accessed or actions performed</th><th>Purpose</th></tr>
+<tr><td><code>youtube.upload</code></td><td>Uploads ACTON's own video files with title, description, tags, category,
+language, audience setting and publication time.</td><td>Publishing ACTON's videos.</td></tr>
+<tr><td><code>youtube.force-ssl</code></td><td>Creates ACTON's playlists and adds ACTON's videos to them; uploads French
+subtitle files; sets thumbnails; reads and updates the status settings of ACTON's own videos (privacy, scheduled
+publication time, licence, embedding, altered/synthetic content disclosure); lists caption tracks of ACTON's videos.
+It is not used to read, post or delete comments or to change other channels.</td><td>Completing and verifying the
+publication of each video.</td></tr>
+<tr><td><code>youtube.readonly</code></td><td>ACTON's channel ID, title, subscriber and video counts; ACTON's video IDs,
+titles, upload and processing status, playlists.</td><td>Confirming which channel is connected and checking that each
+upload succeeded.</td></tr>
+<tr><td><code>yt-analytics.readonly</code></td><td>Aggregated statistics of ACTON's videos: views, estimated minutes
+watched, average view duration, average percentage viewed, subscribers gained, likes; aggregated views by country
+for the channel.</td><td>Measuring which topics and formats perform well to choose future topics.</td></tr>
+</table></div>
+<p>The application does <strong>not</strong> access the owner's e-mail address, Gmail, contacts, Google Drive,
+payment information, viewers' identities, individual comments or private messages. YouTube Analytics data is
+aggregated by YouTube and contains no information about individual viewers.</p>
+
+<h2>3. Public YouTube data (no authorisation)</h2>
+<p>With an API key, the application reads public information about French-language history videos and channels:
+video ID, title, channel name and ID, publication date, duration, public view, like and comment counts, and public
+channel information (subscriber count, number of videos, country). It is used to identify topics that interest
+French-speaking viewers. Public video titles may be used as search terms on Wikipedia to find the matching historical
+article.</p>
+
+<h2>4. How the data is used</h2>
 <ul>
-<li>Data of the owner's channel is kept while the authorisation is active and is deleted within 30 days after the
-authorisation is revoked.</li>
-<li>Public statistics of other channels and videos are refreshed or deleted within 30 days, as required by the
-YouTube API Services Developer Policies.</li>
-<li>The owner can revoke the application's access at any time on the Google security settings page:
-<a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.
-After revocation the application can no longer access the account, and the stored token is deleted.</li>
-<li>Deletion requests can also be sent to the contact address below.</li>
+<li>to upload, schedule and configure ACTON's videos and confirm that every required setting was applied;</li>
+<li>to compute performance indicators of ACTON's videos (for example views per day, average percentage viewed) and
+adjust the choice of future topics and formats;</li>
+<li>to compare ACTON's results with public statistics of similar videos.</li>
+</ul>
+<p>Google user data is processed automatically by the application on the owner's computer. It is not used for
+advertising, profiling of people, credit or lending decisions, and it is not used to develop, improve or train
+generalised artificial-intelligence or machine-learning models. No human other than the channel owner reads it.</p>
+
+<h2>5. Sharing and transfer</h2>
+<p>Google user data is <strong>not sold, rented, shared or transferred</strong> to any third party. The only
+recipient is Google/YouTube itself, when the application calls YouTube API Services on the owner's behalf (for
+example, to upload a video). The application has no servers, so data never leaves the owner's computer except in
+these calls to Google. Data would only be disclosed if required by law.</p>
+
+<h2>6. Storage and security</h2>
+<ul>
+<li><strong>Location:</strong> a local database and local files on the owner's personal Windows computer. There is no
+cloud database and no remote server.</li>
+<li><strong>OAuth credentials:</strong> the refresh token is stored in a separate file in the owner's Windows user
+profile (outside the application's source code and version control), accessible only to the owner's Windows account.
+Short-lived access tokens are kept in memory only and are never written to disk or logs. The OAuth client file is
+stored in a folder restricted to the owner's account.</li>
+<li><strong>API responses:</strong> responses from YouTube APIs may be cached locally for up to 20 hours to avoid
+repeated requests; cache entries are removed within 30 days.</li>
+<li><strong>Logs:</strong> tokens, keys and passwords are never written to logs.</li>
+<li>Communication with Google uses HTTPS only.</li>
 </ul>
 
-<h2>6. YouTube API Services and Google</h2>
-<p>The application uses YouTube API Services. By using it you agree to the
-<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the
-<a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The application complies with the
-<a href="https://developers.google.com/terms">Google APIs Terms of Service</a> and the
-<a href="https://developers.google.com/youtube/terms/developer-policies">YouTube API Services Developer Policies</a>.</p>
-<p>ACTON Studio’s use and transfer to any other app of information received from Google APIs will adhere to the
+<h2>7. Retention and deletion</h2>
+<div class="wrap"><table>
+<tr><th>Data</th><th>How long it is kept</th></tr>
+<tr><td>ACTON's channel and video data and YouTube Analytics reports</td><td>While the owner's authorisation is active.
+If Google reports that the authorisation was revoked or has expired and it is not renewed within 30 days, the
+application automatically deletes the stored Analytics reports, the cached Analytics responses and the refresh token.</td></tr>
+<tr><td>Public statistics of other channels and videos</td><td>Refreshed or deleted within 30 days, as required by the
+YouTube API Services Developer Policies (automatic daily clean-up).</td></tr>
+<tr><td>Cached API responses</td><td>Expire within 20 hours; removed within 30 days.</td></tr>
+<tr><td>Refresh token</td><td>Until access is revoked; deleted at the latest 30 days after revocation.</td></tr>
+</table></div>
+<p><strong>How to revoke access:</strong> open
+<a href="https://security.google.com/settings/security/permissions">Google Account → Security → Third-party apps
+with account access</a>, select ACTON Studio and choose "Remove access". The application then immediately loses access
+to the account, and the stored data is deleted as described above. Immediate deletion can also be requested through
+the contact below.</p>
+
+<h2>8. Cookies and device storage</h2>
+<p>This website uses no cookies, analytics or tracking. The application stores data only on the owner's own computer,
+as described in section 6; it does not place cookies or store information on other people's devices.</p>
+
+<h2>9. Children</h2>
+<p>The application is not directed at children and does not knowingly process children's data. ACTON's videos are
+declared as "not made for kids".</p>
+
+<h2>10. Google and YouTube policies</h2>
+<p>By using ACTON Studio you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+Google's own processing of data is described in the <a href="https://policies.google.com/privacy">Google Privacy
+Policy</a>. The application complies with the <a href="https://developers.google.com/terms">Google APIs Terms of
+Service</a>, the <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API
+Services Terms of Service</a> and the <a href="https://developers.google.com/youtube/terms/developer-policies">YouTube
+API Services Developer Policies</a>.</p>
+<p>ACTON Studio's use and transfer to any other app of information received from Google APIs will adhere to the
 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
 including the Limited Use requirements.</p>
 
-<h2>7. Cookies and children</h2>
-<p>The application has no public website functions, uses no cookies and does not track visitors of this page.
-It is not directed at children and does not knowingly process children's data.</p>
+<h2>11. Changes and contact</h2>
+<p>If this policy changes, the new version is published on this page with a new effective date before the change
+takes effect. Questions, access or deletion requests:
+<a href="https://github.com/septyxa87-pixel">github.com/septyxa87-pixel</a>.</p>
 
-<h2>8. Changes and contact</h2>
-<p>Changes to this policy are published on this page with a new effective date.
-Contact: <a href="https://github.com/septyxa87-pixel">github.com/septyxa87-pixel</a>.</p>
-
-<footer>ACTON Studio · <a href="./">ACTON Studio</a> · <a href="terms.html">Terms of Service</a></footer>
+<footer>ACTON Studio · <a href="./">Home</a> · <a href="terms.html">Terms of Service</a></footer>
 </main>
 </body>
 </html>
