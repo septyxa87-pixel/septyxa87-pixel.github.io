@@ -3,55 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YouTube AI Agent</title>
-<meta name="description" content="YouTube AI Agent — a private tool that prepares, schedules and analyses documentary videos for the owner's own YouTube channel ACTON.">
-<!-- GOOGLE_SITE_VERIFICATION -->
+<title>ACTON Studio — publishing assistant for the ACTON documentary channel</title>
+<meta name="description" content="ACTON Studio is the publishing assistant of ACTON, a French-language history documentary channel. It prepares, schedules and analyses ACTON's own videos.">
 <style>
 :root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5b55;--line:#e3e0d8;--accent:#8a2b1d}
 @media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe6;--muted:#a7a59e;--line:#34332f;--accent:#e08a74}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Georgia,"Times New Roman",serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2rem;line-height:1.2;margin:0 0 .3em}
-h2{font-size:1.2rem;margin:2em 0 .5em;font-family:system-ui,sans-serif}p,li{color:var(--fg)}.muted{color:var(--muted)}
+main{max-width:780px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2.1rem;line-height:1.2;margin:0 0 .3em}
+h2{font-size:1.2rem;margin:2em 0 .5em;font-family:system-ui,sans-serif}.muted{color:var(--muted)}
 nav{font-family:system-ui,sans-serif;font-size:.95rem;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:28px}
-nav a{margin-right:18px}a{color:var(--accent)}footer{margin-top:48px;border-top:1px solid var(--line);padding-top:16px;font-size:.9rem;color:var(--muted);font-family:system-ui,sans-serif}
+nav a{margin-right:18px}a{color:var(--accent)}table{border-collapse:collapse;width:100%;font-size:.95rem}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{font-family:system-ui,sans-serif}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:16px;font-size:.9rem;color:var(--muted);font-family:system-ui,sans-serif}
 </style>
 </head>
 <body>
 <main>
-<nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
-<h1>YouTube AI Agent</h1>
-<p class="muted">A private production assistant for the French-language documentary channel
-<a href="https://www.youtube.com/@ACTON87">ACTON (@ACTON87)</a>.</p>
+<nav><a href="./">ACTON Studio</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+<h1>ACTON Studio</h1>
+<p class="muted">The publishing assistant of <strong>ACTON</strong>, a French-language documentary channel about
+true stories, disasters, mysteries, space and civilisations —
+<a href="https://www.youtube.com/@ACTON87">youtube.com/@ACTON87</a>.</p>
+
+<h2>What ACTON Studio is</h2>
+<p>ACTON Studio is a desktop application used by the creator of the ACTON channel to produce and publish ACTON's own
+documentary videos: three short videos (30–60 seconds) and one 3–5 minute video per day. It runs on the creator's own
+computer. This page is public and requires no sign-in; the application itself has no web interface.</p>
 
 <h2>What it does</h2>
-<ul>
-<li><strong>Topic research.</strong> Reads public YouTube statistics (YouTube Data API) and Wikipedia page views to find
-historical stories — true stories, disasters, mysteries, space, civilisations — that French-speaking audiences are interested in.</li>
-<li><strong>Fact-checked scripts.</strong> Writes original French scripts and checks every date and number against
-several independent sources before a video is produced.</li>
-<li><strong>Video production.</strong> Narration with a synthetic voice, freely licensed archive images (authors credited),
-editing, French subtitles and automatic technical quality control.</li>
-<li><strong>Scheduled publishing.</strong> With the channel owner's authorisation (Google OAuth), uploads finished videos to
-the owner's own channel, sets title, description, playlist, subtitles, thumbnail and the publication time, then verifies the settings.</li>
-<li><strong>Channel analytics.</strong> Reads the owner's own channel statistics (YouTube Analytics API) to learn which
-topics and formats work best.</li>
-</ul>
+<ol>
+<li><strong>Finds topics.</strong> Looks at public statistics of French-language history videos and at Wikipedia
+page views to choose historical events that French-speaking viewers are interested in.</li>
+<li><strong>Writes and checks scripts.</strong> Writes an original French script and checks every date and figure
+against several independent sources.</li>
+<li><strong>Produces the video.</strong> Synthetic narration (disclosed to viewers), freely licensed archive images with
+authors credited, editing, French subtitles and automatic quality checks.</li>
+<li><strong>Publishes on ACTON.</strong> Uploads the finished video to the ACTON channel with its title, description,
+playlist, subtitles and thumbnail, schedules the publication time, and then checks that every setting was applied.</li>
+<li><strong>Learns from results.</strong> Reads ACTON's own statistics (views, watch time, retention, subscribers) to
+choose better topics and formats.</li>
+</ol>
 
-<h2>Who can use it</h2>
-<p>YouTube AI Agent is not a public service. It runs on the owner's personal computer and is used only by the channel
-owner to manage the owner's own YouTube channels. No other users can sign in, and no data from other people's Google
-accounts is collected.</p>
+<h2>Why it asks for access to a Google account</h2>
+<p>To publish and measure ACTON's videos, the channel owner signs in once with Google and allows:</p>
+<table>
+<tr><th>Permission</th><th>Used for</th></tr>
+<tr><td>Upload YouTube videos (<code>youtube.upload</code>)</td><td>uploading ACTON's finished videos</td></tr>
+<tr><td>Manage YouTube videos (<code>youtube.force-ssl</code>)</td><td>playlists, French subtitles, thumbnails, publication time and disclosures of ACTON's own videos</td></tr>
+<tr><td>View YouTube account (<code>youtube.readonly</code>)</td><td>reading ACTON's channel and video details to verify uploads</td></tr>
+<tr><td>View YouTube Analytics reports (<code>yt-analytics.readonly</code>)</td><td>measuring the performance of ACTON's videos</td></tr>
+</table>
+<p>ACTON Studio does not access e-mail, contacts, Drive or any other Google data, and it does not access other people's
+accounts. How data is used, stored and deleted: <a href="privacy.html">Privacy Policy</a>.</p>
 
-<h2>Google and YouTube data</h2>
-<p>The application accesses Google user data only for the owner's channel and only for the purposes above. Details:
-<a href="privacy.html">Privacy Policy</a>. YouTube AI Agent uses YouTube API Services; by using it you agree to the
-<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+<h2>Google and YouTube terms</h2>
+<p>ACTON Studio uses YouTube API Services and complies with the
+<a href="https://developers.google.com/terms">Google APIs Terms of Service</a>, the
+<a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API Services Terms of Service</a>
+and the <a href="https://developers.google.com/youtube/terms/developer-policies">YouTube API Services Developer Policies</a>.
+Use of ACTON Studio is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>. ACTON Studio's use of information received
+from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+including the Limited Use requirements. ACTON Studio is not affiliated with or endorsed by Google or YouTube.</p>
 
 <h2>En français</h2>
-<p>YouTube AI Agent est un outil privé qui aide le propriétaire de la chaîne ACTON à préparer, programmer et analyser
-ses propres vidéos documentaires. Il n'est pas proposé au public.</p>
+<p>ACTON Studio est l'assistant de publication de la chaîne documentaire ACTON : il prépare, programme et analyse les
+vidéos de la chaîne ACTON. Il fonctionne sur l'ordinateur du créateur de la chaîne.</p>
 
-<footer>Contact: <a href="https://github.com/septyxa87-pixel">github.com/septyxa87-pixel</a> · Last updated: 23 November 2026</footer>
+<footer>ACTON Studio · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> ·
+Contact: <a href="https://github.com/septyxa87-pixel">github.com/septyxa87-pixel</a> · Updated 23 November 2026</footer>
 </main>
 </body>
 </html>
